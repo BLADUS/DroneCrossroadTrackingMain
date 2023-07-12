@@ -1,0 +1,198 @@
+{
+    "predictions": [
+        {
+            "x": 333.5,
+            "y": 84.5,
+            "width": 15.0,
+            "height": 21.0,
+            "confidence": 0.8221202492713928,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 440.5,
+            "y": 43.0,
+            "width": 19.0,
+            "height": 22.0,
+            "confidence": 0.8202342987060547,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 324.5,
+            "y": 193.5,
+            "width": 13.0,
+            "height": 23.0,
+            "confidence": 0.7563886642456055,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 343.0,
+            "y": 152.0,
+            "width": 14.0,
+            "height": 22.0,
+            "confidence": 0.7554900646209717,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 267.5,
+            "y": 76.0,
+            "width": 17.0,
+            "height": 24.0,
+            "confidence": 0.727752685546875,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 93.0,
+            "y": 337.0,
+            "width": 20.0,
+            "height": 26.0,
+            "confidence": 0.7073928117752075,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 295.0,
+            "y": 22.0,
+            "width": 18.0,
+            "height": 22.0,
+            "confidence": 0.7068961262702942,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 508.5,
+            "y": 319.5,
+            "width": 19.0,
+            "height": 15.0,
+            "confidence": 0.706298828125,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 383.0,
+            "y": 334.5,
+            "width": 12.0,
+            "height": 23.0,
+            "confidence": 0.6799061894416809,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 231.5,
+            "y": 25.5,
+            "width": 21.0,
+            "height": 27.0,
+            "confidence": 0.6634119749069214,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 231.5,
+            "y": 337.0,
+            "width": 17.0,
+            "height": 16.0,
+            "confidence": 0.6569758653640747,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 211.5,
+            "y": 227.0,
+            "width": 23.0,
+            "height": 24.0,
+            "confidence": 0.6512959599494934,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 332.0,
+            "y": 291.5,
+            "width": 14.0,
+            "height": 25.0,
+            "confidence": 0.6317341923713684,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 352.5,
+            "y": 239.0,
+            "width": 13.0,
+            "height": 24.0,
+            "confidence": 0.5725757479667664,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 418.5,
+            "y": 319.0,
+            "width": 13.0,
+            "height": 24.0,
+            "confidence": 0.5689248442649841,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 253.5,
+            "y": 32.0,
+            "width": 19.0,
+            "height": 24.0,
+            "confidence": 0.4810505211353302,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 307.0,
+            "y": 14.5,
+            "width": 16.0,
+            "height": 27.0,
+            "confidence": 0.4746358096599579,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 268.5,
+            "y": 29.0,
+            "width": 17.0,
+            "height": 24.0,
+            "confidence": 0.44141221046447754,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        },
+        {
+            "x": 387.5,
+            "y": 289.5,
+            "width": 17.0,
+            "height": 29.0,
+            "confidence": 0.41560837626457214,
+            "class": "car",
+            "image_path": "C:\\Users\\kvaso\\PycharmProjects\\DroneCrossroadsTracking\\frames\\frame_147.jpg",
+            "prediction_type": "ObjectDetectionModel"
+        }
+    ],
+    "image": {
+        "width": "640",
+        "height": "360"
+    }
+}
