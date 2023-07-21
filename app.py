@@ -12,7 +12,9 @@ TRACKER = 'botsort.yaml'
 
 coordinates = {}  # {[id тр. ср.]:{[время]:[координаты]}}
 car_lengths = {}  # {[время]: средняя длина тр. средств}
-car_nums = {}  # {[время]: кол-во тр.ср. на перекрёстке}
+
+
+# car_nums = {}  # {[время]: кол-во тр.ср. на перекрёстке}
 
 
 def calculate_distance(m0: list, m1: list, t: float) -> float:  # расстояние между двумя точками, м
@@ -114,14 +116,6 @@ def pixels_to_meters(s: float, avg_car_length: float) -> float:  # перево�
     return 4.5 * s / avg_car_length
 
 
-def density(n_cars: list, vels: list, times: list) -> list:  # плотность, km**(-1)
-    d = []
-    for i in range(1, len(n_cars)):
-        delta_t = times[i] - times[i - 1]
-        d.append(n_cars[i] / (vels[i] * delta_t / 3600))
-    return d
-
-
 def flow(totals: list, times: list) -> (list, list):  # интенсивность, s**(-1)
     f = []
     time_segments = split_time(times)
@@ -137,13 +131,9 @@ def flow(totals: list, times: list) -> (list, list):  # интенсивност
 
 
 def main():
-    global car_nums
     delta_time = []
     times = []
-    distance_stat = []
-    # flow_stat = []
-    # total = 0
-    # delta_vehicle = []
+    density_stat = []
     totals = []
     cap = cv2.VideoCapture(VIDEO_PATH)
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -161,24 +151,10 @@ def main():
         ids = results[0].boxes.id.cpu().numpy().astype(int)
         car_len, distance = get_data(boxes.tolist(), time)
         delta_time.append(time)
-        distance_stat.append(pixels_to_meters(distance, car_len))
+        density_stat.append(1000 / (pixels_to_meters(distance, car_len) + 4.5))
         times.append(time)
         print(f'{time}s')
-        # if not len(delta_time):
-        #     delta_time.append(time)
-        # elif len(delta_time) == 1:
-        #     delta_time = [abs(time - delta_time[0])] * 2
-        # else:
-        #     delta_time.append(abs(time - delta_time[-1]))
-        # if not len(delta_vehicle):
-        #     delta_vehicle.append(max(ids))
-        # elif len(delta_vehicle) == 1:
-        #     delta_vehicle = [abs(max(ids) - delta_vehicle[0])] * 2
-        # else:
-        #     delta_vehicle.append(abs(max(ids) - delta_vehicle[-1]))
-        # flow_stat.append(flow(delta_vehicle[-1], delta_time[-1]))
         totals.append(max(ids))
-        car_nums[time] = len(ids)
 
         for box, vehicle_id, vehicle_class in zip(boxes, ids, classes):
             cv2.rectangle(frame, (box[0], box[1]), (box[2], box[3]),
@@ -194,7 +170,7 @@ def main():
             else:
                 coordinates[vehicle_id][time] = [(box[2] + box[0]) / 2, (box[3] + box[1]) / 2]
         cv2.imshow('Drone Crossroad Detection', frame)
-        # total = max(ids)
+
         if cv2.waitKey(1) & 0xFF == ord('q') or cv2.waitKey(30) == 27:
             break
 
@@ -205,14 +181,6 @@ def main():
     plt.title('График средней скорости потока')
     plt.show()
 
-    nums = [car_nums[t] for t in vel_times]
-    densities = density(nums, vels, vel_times)
-    plt.plot(vel_times[1:], densities)
-    plt.xlabel('время, с')
-    plt.ylabel('плотность потока, n/км дорожного полотна')
-    plt.title('График плотности потока от времени')
-    plt.show()
-
     flow_times, flows = flow(totals, times)
     plt.plot(flow_times, flows)
     plt.xlabel('время, с')
@@ -220,10 +188,10 @@ def main():
     plt.title('График интенсивности потока от времени')
     plt.show()
 
-    plt.plot(times, distance_stat)
+    plt.plot(times, density_stat)
     plt.xlabel('время, с')
-    plt.ylabel('плотность потока, среднее расстояние до сл. тр. средства, м')
-    plt.title('График расстояния до сл. тр. средства')
+    plt.ylabel('плотность потока, n/км дорожного полотна')
+    plt.title('График плотности потока от времени')
     plt.show()
 
     plt.plot(times, totals)
@@ -231,7 +199,6 @@ def main():
     plt.ylabel('кол-во тр.ср. всего')
     plt.title('График зависимости кол-ва тр.ср. потока от времени')
     plt.show()
-    # print(flow_stat)
 
 
 if __name__ == '__main__':
