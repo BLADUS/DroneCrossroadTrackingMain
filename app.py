@@ -71,7 +71,7 @@ def split_time(times: list) -> list:  # разбивает на отрезки �
 
 
 def median(l: list) -> float:  # медиана
-    l.sort()  # плотность =  n_mash / l_polotno, n_mash/v*delta_t
+    l.sort()
     n = len(l)
     if n % 2 == 1 or n == 0:
         return l[n // 2]
